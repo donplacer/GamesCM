@@ -12,24 +12,39 @@
 
 #body {
     width: 100%;
+    background: rgb(13,13,14);
+    background: linear-gradient(90deg, rgba(13,13,14,1) 14%, rgba(0,42,39,1) 50%, rgba(13,13,14,1) 89%);
+ 
 }
 
-#encabezado {
+/*--------------------------------------> ENCABEZADO <--------------------------------------------------*/
+ header {
+ 
     width: 100%;
-    background-color: #111111;
-    display: flex;
-    justify-content: space-between;
+    height: 80px;
+   position: fixed;
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+
+	
+	top: 0;z-index: 1;
+	
+
+
 }
 
-.cajasHeader {
-    width: 33.3%;
-    height: 75px;
-    border: 1px solid white;
+html:before{
+   display: none !important;
 }
+header:hover{
+	
+	box-shadow: 0px 6px 20px 1px  #E0E0E0;
+}
+/*menu principal------------------------>*/
 
 
-/*-----------------------------> ESTILOS PARA MENU NAVEGACION Y SUB MENU ---------------------------------------------------------*/
-
+/*---------------------- CONTENEDOR HEADER SE DIVIDE EN 3 (ICONO ,NAVEGACION,BUSQUEDA) ---------------------------------------------*/
 #contenedor {
 	
    
@@ -71,13 +86,14 @@ justify-content: flex-end;
 
 #nav {
 
-    float: left;
-    margin-left: 1%;
-    margin-right: 1%;
+   
+  
     position: relative;
     width: 50%;
 
     font-size: 12px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 #nav ul.subs {
@@ -95,10 +111,10 @@ justify-content: flex-end;
 }
 
 #nav>li {
-    border-bottom: 5px solid transparent;
-    float: left;
-    margin-bottom: -5px;
-    text-align: left;
+   
+    
+   
+    
     -moz-transition: all 300ms ease-in-out 0s;
     -ms-transition: all 300ms ease-in-out 0s;
     -o-transition: all 300ms ease-in-out 0s;
@@ -124,9 +140,12 @@ justify-content: flex-end;
     line-height: 49px;
     padding: 0 15px;
     text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    
 }
 
-#nav>li:hover>a,
+
 #nav li.active>a:hover {
     border-bottom: 2px solid #04e404;
     color: #FFFFFF;
@@ -139,13 +158,31 @@ justify-content: flex-end;
 
 /* submenu */
 
-#nav li:hover ul.subs {
-    display: block;
+#nav li:hover ul.subs1 {
+    
     background-color:  #333333;
      display: flex;
     justify-content: space-between;
-      width: 120%;
+      width: 70%;
+      left: 12%;
 }
+#nav li:hover ul.subs2 {
+    
+    background-color:  #333333;
+     display: flex;
+    justify-content: space-between;
+      width: 70%;
+      left: 40%;
+}
+#nav li:hover ul.subs3 {
+    
+    background-color:  #333333;
+     display: flex;
+    justify-content: space-between;
+      width: 70%;
+      left: 55% ;
+}
+
 
 #nav ul.subs>li {
     display: inline-block;
@@ -185,30 +222,108 @@ justify-content: flex-end;
 }
 
 
+@media ( max-width :550px) {
+	
+	/*first movil para menu principal*/
+
+	
+	
+	
+	
+	.li-eliminado {
+		display: none !important;
+	}
+	.Contenedor-Busquedad {
+		width: 40%;
+		display: flex;
+		justify-content: space-between;
+	}
+	.contenedorNav {
+		height: 100%;
+		display: flex;
+		
+		width: 200%;
+		
+	}
+	.contenedorNav input {
+		width: 50%;
+	}
+	.Contenedor-Busquedad button {
+		width: 23%;
+	}
+	.contenedorNav img {
+		height: 90%;
+	}
+
+	/*parte menu animado*/
+	
+	#content_menu{
+	
+	
+	
+	}
+	
+	#content_menu li {
+		
+		width: 25%;
+		
+		display: flex;
+		justify-content: center;
+	}
+	
+	#content_menu a{
+	width:100%;
+	text-decoration: none;
+}
+
+   #content_menu img{
+   width: 90%}
+   #content_menu h2{
+	font-size: 14px;
+	color: #5E5E5E;
+	margin-top: 17px;
+}
+	
+	
+	
+	
+	
+	.Preventas {
+		display: none !important;
+	}
+	/*carrusel productos*/
+	#principalIndex {
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		text-align: center;
+		/*background-image: url(img/573739.jpg)*/
+		background-color: #EEEEEE;
+		
+	}
+	.div-carrusel-productos {
+		
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.carrusel-eliminado {
+		display: none !important;
+	}
+	.carrusel {
+		width: 35%;
+		height: 90%;
+	}
+
+}
+
 /* responsive rules */
 
-@media all and (max-width: 980px) {
-    #nav>li {
-        float: none;
-        border-bottom: 0;
-        margin-bottom: 0;
-    }
-    #nav ul.subs {
-        position: relative;
-        top: 0;
-    }
-    #nav li:hover ul.subs {
-        display: none;
-    }
-    #nav li #s1:target+ul.subs,
-    #nav li #s2:target+ul.subs {
-        display: block;
-    }
-    #nav ul.subs>li {
-        display: block;
-        width: auto;
-    }
-}
+
+
+
 
 
 /*---------------------------------------ICONO GAME CM --------------------------------------------*/
@@ -256,7 +371,7 @@ justify-content: flex-end;
 
 .Contenedor-Busquedad form {
     background: #1B1B1B;
-    background: -webkit-linear-gradient(#1B1B1B, #1B1B1B);
+    background: -webkit-linear-gradient(rgb(139, 133, 133), #1B1B1B);
     background: -moz-linear-gradient(#1B1B1B, #1B1B1B);
     background: -o-linear-gradient(#1B1B1B, #1B1B1B);
     background: -ms-linear-gradient(#1B1B1B, #1B1B1B);
@@ -350,35 +465,70 @@ border-radius: 1px;
 
 
 
+
+
 /*---------------------------------------- CUEPO  PRINCIPAL ---------------------*/
 
 #content-principal {
     width: 100%;
-    background-color: #1B1B1B;
-    height: auto;
+   
+   margin-top: 80px;
+justify-content: center;
+ display: flex;
+ flex-direction: column;
+
+height: auto;
+
 }
 
+#video{position: fixed;width: 100%}
 #principal {
     margin: auto;
     flex-direction: row;
-    width: 90%;
+    width: 100%;
     display: flex;
+    justify-content: center;
     /*background-image: url(img/573739.jpg)*/
-    ;
-    padding-bottom: 90px;
-    height: 1200px;
-    align-items: center;
+    height: auto;
+    
+   
+  
     flex-wrap: wrap;
+  
+
 }
 
+#subPrincipal{
 
+    display: flex;
+    height: auto;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    
+}
+
+#absolute{
+    position: absolute;
+    display: flex;
+
+    background: rgba(0,0,0,0.6);
+    margin-top:380px;
+flex-wrap: wrap;
+padding-top: 200px;
+    width: 85%;
+     
+}
 /*lado izquierdo ----------------------------*/
 
 aside {
-    width: 50%;
-    background-color: #1B1B1B;
+    width: 35%;
+ 
     display: flex;
     justify-content: center;
+    align-items: center;
+   
+    
 }
 
 aside .precio {
@@ -390,20 +540,30 @@ aside .disponibilidad {
 }
 
 #galeria {
-    width: 70%;
+    width: 95%;
     display: flex;
+   
     flex-direction: column;
+    
+   
 }
 
 #panel img {
     width: 100%;
-    height: 300px;
+    height: 500px;
+   
+    
 }
 
 #img_opc {
     width: 100%;
     padding-top: 10px;
     overflow: hidden;
+    transition:transform 0.2s;
+    
+}
+#img_opc :hover {
+	transform:scale(1.1);
 }
 
 #img_opc img {
@@ -414,38 +574,43 @@ aside .disponibilidad {
 }
 
 
-/*-------------------------------------------------LADO DERECHO DEL CUERPO ----------------------------*/
+/*-------------------------------------------------LADO CENTRAL DEL CUERPO ----------------------------*/
 
 #content_desc {
-    width: 50%;
+    
+    width: 30%;
     display: flex;
     flex-direction: column;
-    background-color: #1B1B1B;
-    height: 526px;
-    display: flex;
+    
+    
+   
     flex-direction: column;
     border-left: 1px solid #888888;
+  
+   padding-top: 60px
 }
 
 .desc,
 .marca,
 .precio,
 .disponibilidad {
-    width: 60%;
+    width: 80%;
     height: auto;
     padding: 20px;
-    color: #888888
+    color: white/*#888888*/;
+    
 }
 
 .marca{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	border-bottom: #515151;
-	
+	border-bottom: white/*#515151*/;
+	flex-wrap: wrap;
 }
 
 .desc span {
+	
     font-size: 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
@@ -460,7 +625,43 @@ aside .disponibilidad {
     font-size: 45px;
 }
 
+/*ESTRELAS CALIFICACION*/
 
+.clasificacion {
+	width:50%;
+	
+	
+  
+  overflow: hidden;
+  display: block;
+  float: left;
+}
+
+.clasificacion input {
+  position: absolute;
+  top: -100px;
+  
+}
+
+.clasificacion label {
+	font-size:30px;
+  float: right;
+  color: #333;
+}
+
+.clasificacion label:hover,
+.clasificacion label:hover ~ label,
+.clasificacion input:checked ~ label {
+  color: #dd4;
+}
+
+/*---------------------------------- LADO DERECHO DEL CUERPO ---------------------------------------------------*/
+
+#comments{
+	
+
+	
+}
 /*---------------------------------- LADO BAJO DEL CUERPO -------------------------------------------------*/
 
 button:focus,
@@ -470,89 +671,27 @@ select:focus {
     outline: none;
 }
 
-.tabs {
-    display: block;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin: 0;
-    overflow: hidden;
+/*---CAJA QUE CONTIENE AL TEXTAREA*/
+#detalleProd {
+    width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #efedef;
+    height: 570px;
 }
 
-.tabs [class^="tab"] label,
-.tabs [class*=" tab"] label {
-    color: #efedef;
-    cursor: pointer;
-    display: block;
-    font-size: 1.1em;
-    font-weight: 300;
-    line-height: 1em;
-    padding: 2rem 0;
-    text-align: center;
-}
 
-.tabs [class^="tab"] [type="radio"],
-.tabs [class*=" tab"] [type="radio"] {
-    border-bottom: 1px solid rgba(239, 237, 239, 0.5);
-    cursor: pointer;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    display: block;
+#textarea{
     width: 100%;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    resize: none;
+    border: none;
+    overflow: hidden;
+    background-color: transparent;
+    color: #efedef;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 740px;
+    padding: 25px 0;
 }
 
-.tabs [class^="tab"] [type="radio"]:checked,
-.tabs [class*=" tab"] [type="radio"]:checked {
-    border-bottom: 2px solid #04e404;
-}
-
-.tabs [class^="tab"] [type="radio"]:checked+div,
-.tabs [class*=" tab"] [type="radio"]:checked+div {
-    opacity: 1;
-}
-
-.tabs [class^="tab"] [type="radio"]+div,
-.tabs [class*=" tab"] [type="radio"]+div {
-    display: block;
-    opacity: 0;
-    padding: 2rem 0;
-    width: 90%;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-
-.tabs .tab-2 {
-    width: 50%;
-}
-
-.tabs .tab-2 [type="radio"]+div {
-    width: 200%;
-    margin-left: 200%;
-}
-
-.tabs .tab-2 [type="radio"]:checked+div {
-    margin-left: 0;
-}
-
-.tabs .tab-2:last-child [type="radio"]+div {
-    margin-left: 100%;
-}
-
-.tabs .tab-2:last-child [type="radio"]:checked+div {
-    margin-left: -100%;
-}
 
 
 /*--------------------------------------------- FOOTER ----------------------*/
@@ -565,7 +704,9 @@ select:focus {
     align-items: center;
     justify-content: center;
     height: 180px;;
-    
+    margin-top: 2080px;
+
+
 }
 
 
@@ -629,7 +770,7 @@ select:focus {
    margin: auto;
 }
 
-/*estilos chat*/
+/*------estilos chat*/
 
 .chat-container{
 	margin: 0;
@@ -670,96 +811,73 @@ select:focus {
 
 
 @media screen and (max-width:550px) {
+   
     /*---------------------------------------- CUERPO PRINCIPAL ---------------------------------- */
-    #principal {
-        width: 100%;
-        height: auto;
-        border: 1px solid red;
+   
+    #absolute{
+        width: 95%;
+        
         display: flex;
         flex-direction: column;
+        margin-top: 180px;
+        padding-top: 10px;
+      
+        
     }
-    /*---------------------------------------- DESCRIPCION DEL PRODUCTO (CUERPO PRINCIPAL) ---------------------------------- */
-    #content_desc {
-        width: 90%;
+    /*---LADO IZQUIERDO -----*/
+    aside{
+        width: 100%;
         order: 1;
-        height: auto;
-        padding-top: 55px;
-        border: none;
+      
     }
-    .desc,
-    .marca,
-    .precio,
-    .disponibilidad {
-        padding: 4px;
+    #galeria #panel img{
+        
+       height: 300px;
+      
     }
-    #content_desc .precio {
-        display: none;
-        /*-------->  SE AGREGA PARA DESAPARECER DE LA CAJA DESCRIPCION Y PASARLO AL DIV GALERIA*/
-    }
-    #content_desc .disponibilidad {
-        display: none;
-        /*-------->  SE AGREGA PARA DESAPARECER DE LA CAJA DESCRIPCION Y PASARLO AL DIV GALERIA*/
-    }
-    .marca h4 {
-        font-size: 11px;
-    }
-    .desc span {
-        font-size: 23px;
-    }
-    .precio span {
-        font-size: 25px;
-    }
-    /*-------------------------- GALERIA IMAGENES DEL PRODUCTO (CUERPO PRINCIPAL) ---------------------------------- */
-    aside {
+
+    /*--- LADO BAJO DEL ASIDE --*/
+    #content_desc{
         width: 100%;
+       
         order: 2;
-        padding-top: 25px
+        padding: 2px;
+        padding-bottom: 1px;
+        border-left: none;
+       
     }
-    aside #galeria {
-        width: 100%;
-    }
-    aside #img_opc {
-        width: 90%;
-        margin: auto;
-    }
-    aside .precio {
-        display: block;
-        /*-------->  SE AGREGA LO DESAPARECIDO DEL DIV DESCRIPCION PRODUCTO*/
-        width: 90%;
-        font-size: 25px;
-        color: wheat;
-        padding-top: 55px;
-        margin: auto;
-    }
-    aside .disponibilidad {
-        display: block;
-        /*-------->  SE AGREGA LO DESAPARECIDO DEL DIV DESCRIPCION PRODUCTO*/
-        width: 90%;
-        font-size: 25px;
-        color: wheat;
-        margin: auto;
-        padding-bottom: 45px;
-    }
-    #panel img {
-        width: 100%;
-        /*-------->  SE AGRANDA IMAGEN PRINCIPAL AL 100%*/
-    }
-    /*--------------------------- DIV INFORMACION Y ESPECIFICACION DEL PRODUCTO (CUERPO PRINCIPAL) ------------- */
-    .tabs {
+    .marca,.desc,.precio{width: 100%}
+
+
+    /*----LADO BAJO DEL CONTENT_DESC --*/
+    #detalleProd {
         order: 3;
+       
     }
+   
+    /*--CAJA COMENTARIOS DEBAJO DE DETALLEPROD -------------*/
+    #coments{
+        order: 4;
+    }
+  
+    
+
+  
+
     /*------------------------------------ FOOTER ------------------------------------ */
     footer{
     height: 360px;
+    
     }
     #contenedorF {
         width: 100%;
-        
+ 
         height: 100%;
+        margin-top: 2002px;
     }
     #caja2_footer {
         flex-direction: column;
-        height: auto;
+
     }
     .cf {
         width: 100%;

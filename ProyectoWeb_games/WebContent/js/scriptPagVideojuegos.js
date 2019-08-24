@@ -32,7 +32,7 @@ $(document).ready(function(){
 		});
 
 
-
+	
 
 
 
@@ -113,6 +113,10 @@ $(document).ready(function(){
 			  $('#sideNavigation').style.width = "0";
 			  $("#main").style.marginLeft = "0";
 			});
+			
+			
+			
+			
 		
 		
 });

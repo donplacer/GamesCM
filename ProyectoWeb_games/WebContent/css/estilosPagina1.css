@@ -342,7 +342,7 @@ border-radius: 1px;
 }
 
 .Contenedor-Busquedad input:focus:-moz-placeholder {
-    color: #efe;
+    color: red;
 }
 
 
