@@ -676,7 +676,7 @@ select:focus {
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #efedef;
-    height: 570px;
+   
 }
 
 
@@ -688,7 +688,7 @@ select:focus {
     background-color: transparent;
     color: #efedef;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 740px;
+    
     padding: 25px 0;
 }
 
@@ -704,7 +704,7 @@ select:focus {
     align-items: center;
     justify-content: center;
     height: 180px;;
-    margin-top: 2080px;
+    margin-top: 1800px;
 
 
 }
