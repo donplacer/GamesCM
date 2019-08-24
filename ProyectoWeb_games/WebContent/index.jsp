@@ -510,7 +510,7 @@
 					<div class="top border-bottom border-dark">
 
 						<h3>
-							<strong class="text-monospace ">Perifericos</strong> <a
+							<strong class="text-monospace ">Periferico</strong> <a
 								href="perifericos.jsp">Màs Resultado</a>
 						</h3>
 
