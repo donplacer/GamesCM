@@ -3,7 +3,13 @@ package model;
 public class Producto {
 
 	private int codPro,contador;
-	private String descPro,estadoProdu,marcaProd;
+	private String descPro,estadoProdu,marcaProd,detalleProd;
+	public String getDetalleProd() {
+		return detalleProd;
+	}
+	public void setDetalleProd(String detalleProd) {
+		this.detalleProd = detalleProd;
+	}
 	private double precioPro;
 	
 	public String getMarcaProd() {

@@ -173,7 +173,7 @@ public class gestionProducto implements InterfacesProducto{
 						p.setDescPro(rs.getString(2));
 						p.setMarcaProd(rs.getString(4));
 						p.setPrecioPro(rs.getDouble(5));
-						
+						p.setDescPro(rs.getString(6));
 					
 						lista.add(p);
 						
@@ -464,7 +464,7 @@ public class gestionProducto implements InterfacesProducto{
 				p.setDescPro(rs.getString(2));
 				p.setMarcaProd(rs.getString(4));
 				p.setPrecioPro(rs.getDouble(5));
-				
+				p.setDetalleProd(rs.getString(8));
 				
 				
 			}

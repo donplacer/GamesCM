@@ -1,7 +1,7 @@
 	/* Navbar mobile
 	-------------------------------------------------------*/
 	
-		$(".boton").click(function(){		
+		$(".boton1").click(function(){		
 			$('.container-busquedad').toggle('slow');	
 			
 			 

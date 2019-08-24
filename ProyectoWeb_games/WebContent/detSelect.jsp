@@ -312,20 +312,7 @@
                         <h2 >Detalles</h2>
 
                         <textarea id="textarea" readonly style="display: flex;">                          
-El uso de PlayStation®VR no es apto para niños menores de 12 años.
-Este artículo incluye algún contenido de VR. Se requieren PlayStation®VR y PlayStation®Camera para poder usar la funcionalidad de RV.
-  
-El peligro y la soledad emanan de las decrépitas paredes de una granja abandonada en el sur de los EE. UU. «7» marca un nuevo inicio para el género del survival horror, con un cambio total de modelo con la aterradora e inmersiva perspectiva de jugador «vista aislada». Con el revolucionario RE Engine, el terror llega a nuevas cotas, con un fotorrealismo tan impactante que no podrás apartar los ojos. Entra en un espeluznante nuevo mundo de terror y sobrevive.
-  
-Audio : Español , Inglés
-Sub titulos : Español , Inglés
-  
-Multiplayer Offline : 1 jugadores
-Multiplayer Online : No cuenta con modo offline
-Peso : 22 GB
-Bug Secundaria : No
-  
-PD.- Bug secundaria te indica que aún comprando la cuenta secundaria te deja jugar con tu cuenta personal. Revisa como hacer el bug en este link :
+${p.detalleProd }sdfdzsfgvdfsdsf
                                 </textarea>
                     </div>
                     <!----------------------      0        ----------------------->
