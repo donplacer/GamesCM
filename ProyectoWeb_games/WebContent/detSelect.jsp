@@ -209,7 +209,7 @@
 
                 <div id="video">
                     <video id="vid" style="width: 100%"  muted autoplay loop>
-                        <source src="video/fortnite_ps4.mp4">
+                        <source src="video/video.mp4">
                     </video>
 
 
