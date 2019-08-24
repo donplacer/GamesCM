@@ -38,28 +38,52 @@ private int pag;
 			
 			 
 			 
-			 
-			 
+			int numero=0;
 			 for (Producto p:listado) {
-			
-					 		 out.print("<div class=\"carrusel \">\r\n" + 
-					 		 
-          "                                         <div class=\"div-imagen-carrusel \">\r\n" + 
- 		"												<a href=\"cargardatos?id="+p.getCodPro()+"\"><img class=\"imagenes-carrusel-Producto \"\r\n" + 
- 		"													src=\"img/ps4.png \"\r\n" + 
- 		"													alt=\" \" />\r\n</a> "+ 
- 		"											</div>\r\n" + 
- 		"											<div class=\"div-contenido-carrusel \">\r\n" + 
- 		"												<a style='display:flex;align-items:flex-start;' href=\"# \">"+p.getMarcaProd()+"</a>\r\n" + 
- 		"\r\n" + 
- 		"												<h5>"+p.getDescPro()+"</h5>\r\n" + 
- 		"											</div>\r\n" + 
- 		"											<a\r\n" + 
- 		"												style='margin-top:10px;' href=\"detSelect.jsp?id="+p.getCodPro()+"&des="+p.getDescPro()+"&estadoPro="+p.getestadoProdu()+"\"><button\r\n" + 
- 		"													type=\"button\" class=\" btn btn-outline-success\">Ver Descripcion</button></a>\r\n" + 
- 		"										</div>\r\n" + 
- 		"");
+				 
+				 if(numero<3) {
+				 
+				 out.print("<div class=\"carrusel \">\r\n" + 
+					 		"\r\n" + 
+					 		"										<div class=\"div-imagen-carrusel\">\r\n" + 
+					 		"											<a href=\"cargardatos?id="+p.getCodPro()+"\"><img class=\"imagenes-carrusel-Producto\"\r\n" + 
+					 		"												src=\"img/imagenesProductos/"+p.getCodPro()+".png\"\r\n" + 
+					 		"												alt=\"no img\" />\r\n" + 
+					 		"										</div>\r\n" + 
+					 		"										<div class=\"div-contenido-carrusel\">\r\n" + 
+					 		"											<a href=\"#\">"+p.getDescPro()+"</a>\r\n" + 
+					 		"\r\n" + 
+					 		"											<h5>$235,90</h5>\r\n" + 
+					 		"										</div>\r\n" + 
+					 		"										<button type=\"button\" class=\"btn btn-outline-success\">AGREGAR\r\n" + 
+					 		"											AL CARRITO</button>\r\n" + 
+					 		"									</div>");
+				 numero++;
 					 	}
+						
+				 else {
+					 out.print("<div class=\"carrusel li-eliminado \">\r\n" + 
+						 		"\r\n" + 
+						 		"										<div class=\"div-imagen-carrusel\">\r\n" + 
+						 		"											<a href=\"cargardatos?id="+p.getCodPro()+"\"><img class=\"imagenes-carrusel-Producto\"\r\n" + 
+						 		"												src=\"img/imagenesProductos/"+p.getCodPro()+".png\"\r\n" + 
+						 		"												alt=\"no img\" />\r\n" + 
+						 		"										</div>\r\n" + 
+						 		"										<div class=\"div-contenido-carrusel\">\r\n" + 
+						 		"											<a href=\"#\">"+p.getDescPro()+"</a>\r\n" + 
+						 		"\r\n" + 
+						 		"											<h5>$235,90</h5>\r\n" + 
+						 		"										</div>\r\n" + 
+						 		"										<button type=\"button\" class=\"btn btn-outline-success\">AGREGAR\r\n" + 
+						 		"											AL CARRITO</button>\r\n" + 
+						 		"									</div>");
+				 }
+					 
+				 }
+						
+					 
+			 			
+				 
 						
 					
 

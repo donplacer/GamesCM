@@ -94,7 +94,7 @@ justify-content: flex-end;
 
 #nav ul.subs {
     background-color: #49474767;
-    ;
+    
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     color: #333333;
     display: none;
@@ -217,106 +217,6 @@ justify-content: flex-end;
     padding-left: 15px;
 }
 
-
-@media ( max-width :550px) {
-	body {
-		bordeR:4px solid blue;
-	}
-	
-	
-	/*first movil para menu principal*/
-
-	
-	
-	
-	
-	.li-eliminado {
-		display: none !important;
-	}
-	.Contenedor-Busquedad {
-		width: 40%;
-		display: flex;
-		justify-content: space-between;
-	}
-	.contenedorNav {
-		height: 100%;
-		display: flex;
-		
-		width: 200%;
-		
-	}
-	.contenedorNav input {
-		width: 50%;
-	}
-	.Contenedor-Busquedad button {
-		width: 23%;
-	}
-	.contenedorNav img {
-		height: 90%;
-	}
-
-	/*parte menu animado*/
-	
-	#content_menu{
-	
-	
-	
-	}
-	
-	#content_menu li {
-		
-		width: 25%;
-		
-		display: flex;
-		justify-content: center;
-	}
-	
-	#content_menu a{
-	width:100%;
-	text-decoration: none;
-}
-
-   #content_menu img{
-   width: 90%}
-   #content_menu h2{
-	font-size: 14px;
-	color: #5E5E5E;
-	margin-top: 17px;
-}
-	
-	
-	
-	
-	
-	.Preventas {
-		display: none !important;
-	}
-	/*carrusel productos*/
-	#principalIndex {
-		flex-direction: column;
-		height: 100%;
-		width: 100%;
-		text-align: center;
-		/*background-image: url(img/573739.jpg)*/
-		background-color: #EEEEEE;
-		
-	}
-	.div-carrusel-productos {
-		
-		height: 100%;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-	}
-	.carrusel-eliminado {
-		display: none !important;
-	}
-	.carrusel {
-		width: 35%;
-		height: 90%;
-	}
-}
 
 
 /* responsive rules */
@@ -613,6 +513,7 @@ border-radius: 1px;
 /*------------ NAVEGACION CENTRAL ------------------*/
 
 #nav_central{
+	position:relative;
 	width: 100%;
 	display:flex;
 	justify-content:center;
@@ -624,10 +525,11 @@ border-radius: 1px;
 
 #content_menu{
 	
-	width: 50%;
+	width: 76%;
 	height:200px;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 
 #content_menu li{
@@ -635,12 +537,9 @@ border-radius: 1px;
 
 	width: 25%;
 	list-style: none;
-	display:flex;
+	
 	justify-content: center;
 	text-align: center;
-    align-items: center;
-    flex-direction: row;
-  
 }
 #content_menu a{
 	text-decoration: none;
@@ -697,44 +596,9 @@ border-radius: 1px;
 
 
 
+ 
 
 
-
-
-@media screen and (max-width:1000px ){
-
-	#nav_central{
-	  
-	width:100%;
-	height:250px;
-	
-	
-	
-	}
-	#content_menu{
-	width: 100%;
-	height:200px;
-	
-	}
-	#content_menu li {
-		
-		width: 25%;
-		
-		display: flex;
-		justify-content: center;
-	}
-	
-	#content_menu a{
-	width:100%;
-}
-
-   
-   #content_menu h2{
-	font-size: 17px;
-	color: #5E5E5E;
-	margin-top: 17px;
-}
-}
 
 
 
@@ -865,6 +729,115 @@ h3 strong{
    margin: auto;
 }
 
+.header-principal{
+	display: block;
+}
+
+
+@media screen and (max-width: 550px)  {
+	
+	
+	/*first movil para menu principal*/
+	.header-principal{
+	display: none;
+	}
+	.imgnav{
+	height: 74px;
+	width: 97%;
+	}
+	.elimina-preventa{
+	display: none;
+	}
+	#content_menu{
+	
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	}
+	
+	
+	
+	.li-eliminado {
+		display: none !important;
+		position: absolute;
+	}
+	.Contenedor-Busquedad {
+		width: 40%;
+		display: flex;
+		justify-content: space-between;
+	}
+	.contenedorNav {
+		height: 100%;
+		display: flex;
+		
+		width: 200%;
+		
+	}
+	.contenedorNav input {
+		width: 50%;
+	}
+	.Contenedor-Busquedad button {
+		width: 23%;
+	}
+	.contenedorNav img {
+		height: 90%;
+	}
+
+	/*parte menu animado*/
+	
+
+	
+	
+	#content_menu a{
+	width:100%;
+	text-decoration: none;
+}
+
+ 
+   #content_menu h2{
+	font-size: 14px;
+	color: #5E5E5E;
+	margin-top: 17px;
+}
+	
+	
+	
+	
+	
+	.Preventas {
+		display: none !important;
+	}
+	/*carrusel productos*/
+	#principalIndex {
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		text-align: center;
+		/*background-image: url(img/573739.jpg)*/
+		background-color: #EEEEEE;
+		
+	}
+	.div-carrusel-productos {
+		
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.carrusel-eliminado {
+		display: none !important;
+	}
+	.carrusel {
+		width: 35%;
+		height: 90%;
+	}
+	
+	
+
+	
+}
 
 
 
