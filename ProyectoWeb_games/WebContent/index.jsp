@@ -511,7 +511,7 @@
 
 						<h3>
 							<strong class="text-monospace ">Periferico</strong> <a
-								href="perifericos.jsp">Màs Resultado</a>
+								href="perifericos.jsp">Màs Resultados</a>
 						</h3>
 
 
